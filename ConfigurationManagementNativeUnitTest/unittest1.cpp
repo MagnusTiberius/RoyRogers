@@ -74,6 +74,9 @@ namespace ConfigurationManagementNativeUnitTest
 			Vehicle *v2 = new Vehicle("Porsche", "911", "Coupe");
 			ConfigItem<Vehicle>* ri2 = new ConfigItem<Vehicle>(v2);
 			r->AddItem("Car2", ri2);
+
+			ConfigResource<Vehicle> r2 = *r;
+
 		}
 
 	};

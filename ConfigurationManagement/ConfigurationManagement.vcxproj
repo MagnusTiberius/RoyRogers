@@ -42,6 +42,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)\lib\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)obj\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(SolutionDir)\jsoncp\json\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -84,6 +85,7 @@
     <ClInclude Include="ConfigItem.h" />
     <ClInclude Include="ConfigResource.h" />
     <ClInclude Include="Context.h" />
+    <ClInclude Include="IJsonSerializable.h" />
     <ClInclude Include="Specification.h" />
     <ClInclude Include="Version.h" />
   </ItemGroup>
@@ -93,8 +95,12 @@
     <ClCompile Include="ConfigItem.cpp" />
     <ClCompile Include="ConfigResource.cpp" />
     <ClCompile Include="Context.cpp" />
+    <ClCompile Include="IJsonSerializable.cpp" />
     <ClCompile Include="Specification.cpp" />
     <ClCompile Include="Version.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\jsoncp\jsoncp.vcxproj" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
