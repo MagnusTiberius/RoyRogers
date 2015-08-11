@@ -23,6 +23,7 @@ private:
 	std::map<string, ConfigResource*> mapResourceList;
 	std::map<string, ConfigItem<T>*> mapResourceItemList;
 	std::map<string, ConfigResource*> mapReplacementList;
+	std::map<string, ConfigResource*> mapVersionList;
 
 	bool mIsSelected;
 	bool mIsStandard;

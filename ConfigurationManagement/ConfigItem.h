@@ -7,9 +7,9 @@ template <class T>
 class ConfigItem : public BaseID
 {
 public:
-	ConfigItem()
+	ConfigItem(T* item)
 	{
-
+		mItem = item;
 	}
 
 	~ConfigItem()
@@ -20,5 +20,6 @@ public:
 private:
 	std::map<string, T*> itemList;
 
+	T* mItem;
 };
 
